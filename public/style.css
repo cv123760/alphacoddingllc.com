@@ -84,13 +84,21 @@ nav {
     justify-content: space-between;
 }
 
+#bMenu {
+    display: none;
+}
+
+#bMenu img {
+    filter: invert(100%);
+    ;
+}
+
 header a {
     color: #535353;
 }
 
 
 .mobileNavDiv {
-    display: none;
     background-color: rgba(255, 255, 255, 0.95);
     position: fixed;
     top: 50px;
@@ -104,7 +112,7 @@ header a {
     background-image: url("./images/heroImage.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -148,6 +156,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 1rem;
 }
 
 .serviceDiv {
@@ -188,17 +197,6 @@ textarea {
 input:invalid,
 textarea:invalid {
     border: solid 1px #CCCCCC;
-}
-
-
-@keyframes hover-grow {
-    form {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.1);
-    }
 }
 
 
@@ -268,7 +266,7 @@ footer {
 }
 
 .package {
-    width: 26%;
+    width: 25%;
     background-color: white;
     text-align: center;
     padding: 2rem;
@@ -289,7 +287,7 @@ footer {
         display: none;
     }
 
-    .mobileNavDiv {
+    #bMenu {
         display: block;
     }
 
@@ -300,4 +298,33 @@ footer {
         background-color: white;
     }
 
+    .serviceDiv,
+    .projectDiv,
+    .package {
+        width: 100%;
+    }
+
+}
+
+
+#confirmation {
+    height: 100vh;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#confirmationTextDiv {
+    background-color: white;
+    background-image: url("./images/heroImage.jpg");
+    background-position: center;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+#confirmationTextDiv p{
+    color: white;
 }

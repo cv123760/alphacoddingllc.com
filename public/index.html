@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha Coding LLC – Custom Websites & Hosting for Small Businesses</title>
+    <title>Alpha Coding LLC - Custom Websites & Hosting for Small Businesses</title>
     <meta name="description"
         content="Custom websites for small businesses — simple, affordable, and professionally built with hosting and support included.">
     <link rel="stylesheet" href="./style.css">
@@ -27,18 +27,22 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <div class="mobileNavDiv">
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+        <div id="bMenu">
+            <img src="./images/burgerMenu.svg" alt="image is missing">
+        </div>
+
+        <div id="mobileNavDiv" class="mobileNavDiv">
+            <a class="mobileATag" href="#services">Services</a>
+            <a class="mobileATag" href="#projects">Projects</a>
+            <a class="mobileATag" href="#about">About</a>
+            <a class="mobileATag" href="#pricing">Pricing</a>
+            <a class="mobileATag" href="#contact">Contact</a>
         </div>
     </header>
 
     <section id="hero">
         <div id="heroText">
-            <h2>Custom Software Solutions For Your Business</h1>
+            <h2>Custom Software Solutions For Your Business</h2>
 
                 <p>Empowering businesses to thrive in the digital age through strategic consulting and cutting-edge
                     solutions. Let's guide your business through every step of your digital transformation journey.</p>
@@ -132,11 +136,11 @@
         <div class="sectionDiv">
 
             <h3>About</h3>
-            <p>Hi, I'm Carlos, a full-stack developer dedicated to creating meaningful tools for people. After spending
+            <p>Hi, I am Carlos, a full-stack developer dedicated to creating meaningful tools for people. After spending
                 years on the forefront of AI—helping it learn to write and understand code—I've decided to make
                 development my main focus. While I continue to keep a foot in the world of AI on my own time, my primary
                 goal is to leverage my experience to build practical, user-centric applications that make a tangible
-                difference for both individuals and businesses..</p>
+                difference for both individuals and businesses.</p>
 
             <p>These days, I focus on creating clean, fast websites and custom software for small businesses. I handle
                 everything myself - from development to hosting to ongoing support - with a focus on keeping things
@@ -262,6 +266,41 @@
             <p>&copy; 2025 Alpha Coding LLC. All rights reserved.</p>
         </div>
     </footer>
+
+
+    <script>
+        const bMenu = document.getElementById("bMenu");
+        const mobileNavDiv = document.getElementById("mobileNavDiv");
+
+
+
+        mobileNavDiv.style.display = "none"
+
+        const toggleMobileNav = () => {
+            if (mobileNavDiv.style.display === "none") {
+                console.log(mobileNavDiv.style.display)
+                mobileNavDiv.style.display = "block"
+            } else {
+                mobileNavDiv.style.display = "none"
+            }
+        }
+
+        bMenu.addEventListener("click", () => {
+            toggleMobileNav()
+        });
+
+        document.addEventListener("click", e => {
+
+            console.log("click")
+
+            // hide mobile nave when clicked outside of the div
+            if (!bMenu.contains(e.target)) {
+                mobileNavDiv.style.display = "none"
+            }
+        })
+
+
+    </script>
 
 </body>
 
