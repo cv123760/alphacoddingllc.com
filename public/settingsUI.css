@@ -1,0 +1,198 @@
+/* Color variables for Light and Dark themes */
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color-primary: #333333;
+    --text-color-secondary: #666666;
+    --border-color: #e0e0e0;
+    --toggle-track-bg: #e2e2e2;
+    --toggle-thumb-bg: #fff;
+    --toggle-active-bg: #4caf50;
+    --primary-btn-bg: #007bff;
+    --primary-btn-text: #fff;
+    --secondary-btn-bg: #f9f9f9;
+    --secondary-btn-text: #333;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color-primary: #e0e0e0;
+    --text-color-secondary: #b0b0b0;
+    --border-color: #424242;
+    --toggle-track-bg: #424242;
+    --toggle-thumb-bg: #bdbdbd;
+    --toggle-active-bg: #66bb6a;
+    --primary-btn-bg: #42a5f5;
+    --primary-btn-text: #1e1e1e;
+    --secondary-btn-bg: #2d2d2d;
+    --secondary-btn-text: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.settings-container {
+    width: 100%;
+    max-width: 650px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.settings-section {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.settings-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-btn-bg);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.setting-item.with-input {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.setting-item.with-input label {
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    color: var(--text-color-primary);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-btn-bg);
+}
+
+/* Custom Toggle Switch Styling */
+.toggle-switch-container {
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-track-bg);
+    transition: background-color 0.4s;
+    border-radius: 25px;
+}
+
+.toggle-switch-label:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2.5px;
+    background-color: var(--toggle-thumb-bg);
+    transition: transform 0.4s, background-color 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-switch-input:checked + .toggle-switch-label {
+    background-color: var(--toggle-active-bg);
+}
+
+.toggle-switch-input:checked + .toggle-switch-label:before {
+    transform: translateX(25px);
+    background-color: var(--toggle-thumb-bg);
+}
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-text);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-btn-bg);
+    color: var(--secondary-btn-text);
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 500px) {
+    .settings-container {
+        padding: 20px;
+    }
+    .settings-actions {
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .btn {
+        width: 100%;
+    }
+}

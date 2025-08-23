@@ -18,25 +18,25 @@ body {
     background-color: #F9F9F9;
 }
 
-h1 {
+.navTitle {
     font-size: 1.5rem;
     margin: 0;
 }
 
-h2 {
+h1 {
     font-size: 4rem;
     text-align: center;
     font-family: "Libertinus Serif", serif;
 }
 
-h3 {
+h2 {
     font-family: "Libertinus Serif", serif;
     font-size: 3rem;
     margin-bottom: 0;
     color: #444445;
 }
 
-h4 {
+h3 {
     font-family: "Libertinus Serif", serif;
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -128,13 +128,21 @@ header a {
     color: white;
 }
 
-.letsTalkButton,
 button {
     font-size: 1.25rem;
     padding: 1rem 2rem;
     border: none;
     background-color: #2563EB;
     color: white;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+.letsTalkButton {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #93C5FD;
+    color: black;
     border-radius: 16px;
     transition: transform 0.3s ease;
 }

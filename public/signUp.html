@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Gala Volunteer Sign-up</title>
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-card">
+            <div class="form-header">
+                <img src="./UI_Images/signUpBg.png" alt="Galaxy background" class="header-image">
+                <h2>Join the Starlight Gala Team</h2>
+                <p>Sign up to volunteer and help us make this event a night to remember!</p>
+            </div>
+            <form id="volunteer-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="role">Preferred Volunteer Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">-- Please Select --</option>
+                        <option value="greeter">Greeter / Host</option>
+                        <option value="usher">Usher / Seating Assistant</option>
+                        <option value="logistics">Logistics Support</option>
+                        <option value="setup">Setup & Breakdown Crew</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message to the organizers (Optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
